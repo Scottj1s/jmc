@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!--Copy to %USERPROFILE%\Documents\Visual Studio 2019\Visualizers-->
+
+<NonUserCode xmlns="http://schemas.microsoft.com/vstudio/debugger/jmc/2013">
+
+  <!-- C++/WinRT header files-->
+  <File Name="*\winrt\base.h" />
+
+  <!-- Functions -->
+  <!-- Experiments here were unsuccesful in suppressing cppwinrt exceptions, 
+    and only move the exception message up the stack. -->
+  <Function Name="winrt::check_hresult" ExceptionImplementation="true" />
+  <Function Name="winrt::throw_hresult" ExceptionImplementation="true" />
+  <Function Name="winrt::throw_hresult_no_interface" ExceptionImplementation="true" />
+
+</NonUserCode>
